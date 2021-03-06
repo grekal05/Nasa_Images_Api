@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de API da Nasa</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- uso de bootstrap!: -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+    <header class="py-4 mb-4" style="background-color: rgb(37, 20, 175); color: white;">
+        <h1 class="text-center">Imagens da NASA para espectadores deste universo</h1>
+    </header>
+
+    <div class="container" id="formulario">
+        <form onsubmit="Selecionando_valor (event)" id="search-form" justify-content-center>
+            <div class="row" >
+                
+
+                <fieldset class="col-auto" data-search-type-fieldset="random" >
+                    <legend>
+Imagens Aleatórias</legend>
+                    <label for="random_qty">Número de imagens que você deseja assistir:</label>
+                    <input
+                    class="form-control"
+                    name="random_qty"
+                    id="random_qty"
+                    type="number"
+                    value="12"           
+                    />
+                </fieldset>
+<fieldset >  
+    <legend> Imagens por periode </legend>
+    <label for=" start-date" >  Data de Inicio: </label>
+    <input name="start-date" id=" start-date" type="date" class="form-control"/>
+    <label for="end-date" >  Data Final </label>
+    <input name="end-date" id=" end-date" type="date" class="form-control"/>
+ </fieldset>
+
+
+
+              
+            </div>
+            <div id = "div_button" class="my-5">
+                <button id="button" class="btn btn-primary" type="submit">Pesquisa</button> <!--Se a gente não botar type:submit, da igual, porque o botão esta dentro de um formulario e esse é o comportamento padrão dele, vou deixar para que fique só de forma explicita-->
+            </div>
+        </form>
+    </div>
+
+    <section class="container mt-4">
+        <div id="search-results" class="d-flex flex-wrap justify-content-center">
+                
+        </div>
+    </section>
+    <script src="script.js"></script>
+
+</body>
+</html>
